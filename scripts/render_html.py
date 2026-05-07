@@ -105,10 +105,12 @@ def _title(s: dict, i: int) -> str:
     date  = esc(s.get("date", ""))
     return _wrap(
         _banner(s) + _label(s) +
+        f'<div class="title-center">'
         f'<h1 class="title-h1">{title}</h1>'
         f'<div class="title-line"></div>' +
         (f'<p class="title-sub">{sub}</p>' if sub else "") +
         (f'<p class="title-date">{date}</p>' if date else "") +
+        f'</div>' +
         _summary(s),
         i, "s-title",
     )
@@ -377,7 +379,10 @@ html,body{width:100%;height:100%;background:#FFFFFF;font-family:var(--font);over
 }
 
 /* ── title ── */
-.s-title{justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden}
+.s-title{overflow:hidden}
+.title-center{
+  flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center
+}
 .s-title::before{
   content:'';position:absolute;bottom:-80px;right:-60px;
   width:clamp(200px,36vw,440px);height:clamp(200px,36vw,440px);
@@ -401,7 +406,7 @@ html,body{width:100%;height:100%;background:#FFFFFF;font-family:var(--font);over
 /* ── section ── */
 .s-section{
   background:var(--c1);align-items:center;justify-content:center;text-align:center;
-  position:relative;overflow:hidden
+  overflow:hidden
 }
 .s-section::before{
   content:'';position:absolute;inset:0;
@@ -503,7 +508,7 @@ html,body{width:100%;height:100%;background:#FFFFFF;font-family:var(--font);over
 .img-cap{font-size:var(--fs-xs);color:var(--t3);text-align:center;font-style:italic}
 
 /* ── quote ── */
-.s-quote{justify-content:center;position:relative;overflow:hidden;background:var(--c1)}
+.s-quote{justify-content:center;overflow:hidden;background:var(--c1)}
 .s-quote::before{
   content:'';position:absolute;inset:0;
   background:radial-gradient(ellipse at 25% 50%,rgba(245,166,35,.07),transparent 55%);
@@ -542,7 +547,7 @@ html,body{width:100%;height:100%;background:#FFFFFF;font-family:var(--font);over
 .data-tbl tbody tr:hover td{background:rgba(245,166,35,.06);color:var(--t1)}
 
 /* ── closing ── */
-.s-closing{background:var(--c1);align-items:center;justify-content:center;position:relative;overflow:hidden}
+.s-closing{background:var(--c1);align-items:center;justify-content:center;overflow:hidden}
 .s-closing::before{
   content:'';position:absolute;inset:0;
   background:radial-gradient(ellipse at 50% 120%,rgba(245,166,35,.18),rgba(224,123,0,.06) 45%,transparent 65%);
@@ -562,7 +567,7 @@ html,body{width:100%;height:100%;background:#FFFFFF;font-family:var(--font);over
 .closing-bar{position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--b);z-index:2}
 
 /* ── callout ── */
-.s-callout{background:var(--c1);align-items:center;justify-content:center;position:relative;overflow:hidden}
+.s-callout{background:var(--c1);align-items:center;justify-content:center;overflow:hidden}
 .s-callout::before{
   content:'';position:absolute;inset:0;
   background:radial-gradient(ellipse at 50% 50%,rgba(245,166,35,.08),transparent 55%);
