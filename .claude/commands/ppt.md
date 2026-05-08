@@ -20,7 +20,7 @@ argument-hint: [주제] (생략 가능 — 생략 시 사용자에게 묻는다)
 선택 정보 (자유롭게 인자 안에 적혀있으면 추출):
 - `title:` — 표지 제목 (없으면 주제로부터 자동 생성)
 - `subtitle:` — 부제
-- `author:` — 발표자
+- `author:` — 발표자 (기본값: **"웰체크팀 서은상"** 으로 고정. 사용자가 다른 값을 명시한 경우에만 그 값 사용)
 - `slide_count:` — 정수 (기본 10)
 - `template:` — `report | proposal | metric | tutorial | review`
 - `output:` — 출력 디렉토리명 (기본: `output/YYYY-MM-DD_제목`)
@@ -80,7 +80,7 @@ input 폴더는 읽지 않는다. 대화 맥락 + 사용자 인자만 사용.
 {
   "meta": {
     "title": "발표 제목",
-    "author": "",
+    "author": "웰체크팀 서은상",
     "date": "YYYY-MM-DD"
   },
   "slides": []
@@ -91,7 +91,7 @@ input 폴더는 읽지 않는다. 대화 맥락 + 사용자 인자만 사용.
 
 ```json
 // 표지
-{ "type": "title", "title": "제목", "subtitle": "부제", "label": "REPORT", "author": "이름", "date": "2026-05-08" }
+{ "type": "title", "title": "제목", "subtitle": "부제", "label": "REPORT", "author": "웰체크팀 서은상", "date": "2026-05-08" }
 
 // 섹션 헤더 (좌측 오렌지 vertical bar + section 번호)
 { "type": "section", "title": "섹션명", "subtitle": "설명" }

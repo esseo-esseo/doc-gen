@@ -79,7 +79,7 @@ find input/ -not -path 'input/_archive/*' -not -name 'request.yaml' -type f
 {
   "meta": {
     "title": "문서 제목",
-    "author": "",
+    "author": "웰체크팀 서은상",
     "date": "YYYY-MM-DD"
   },
   "slides": []
