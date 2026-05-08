@@ -1,0 +1,8 @@
+type: presentation
+title: "이슈 접수 채널 자동화"
+subtitle: "Slack · N8N · Jira 연동으로 이슈 처리 프로세스 혁신"
+template: proposal
+confluence: false
+instructions: |
+  PDF 원문 기반. 문제 현황 → AS-IS/TO-BE 비교 → 솔루션 원칙 → 기술 스택 → 구축 가이드 → 한계/후속과제 순서로 구성.
+  핵심 강조: 사업부는 슬랙에만 입력하면 나머지는 모두 자동화됨.

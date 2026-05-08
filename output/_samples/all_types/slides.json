@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "title": "Doc-Gen 디자인 시스템 시안",
+    "author": "Design System",
+    "date": "2026-05-08"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "title": "Doc-Gen 디자인 시스템",
+      "subtitle": "12개 슬라이드 타입 시안 — 토큰·타이포·인터랙션 검증용",
+      "label": "DESIGN SYSTEM",
+      "author": "Design System",
+      "date": "2026-05-08"
+    },
+    {
+      "type": "agenda",
+      "title": "이 시안에 포함된 슬라이드 타입",
+      "items": [
+        { "heading": "기본 구조", "sub": "title · section · closing · agenda" },
+        { "heading": "콘텐츠", "sub": "bullets · two_column · table" },
+        { "heading": "프로세스 / 비교", "sub": "flow (4단계 색상) · two_column rows" },
+        { "heading": "강조", "sub": "callout · quote" },
+        { "heading": "데이터 임팩트", "sub": "metric (hero / 2-up / 4-up)" },
+        { "heading": "미디어", "sub": "image (placeholder 데모)" }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "데이터 임팩트",
+      "subtitle": "metric 타입 — KPI 빅 넘버 강조"
+    },
+    {
+      "type": "metric",
+      "items": [{ "value": "112%", "label": "Q2 매출 달성율", "delta": "+12%p", "caption": "목표 대비 달성, 전 분기 +23% 성장" }]
+    },
+    {
+      "type": "metric",
+      "title": "Q2 핵심 지표",
+      "items": [
+        { "value": "1.35억", "label": "매출", "delta": "+23%", "caption": "목표 1.2억 대비 112%" },
+        { "value": "847명", "label": "신규 고객", "delta": "+158명", "caption": "재계약율 91%" },
+        { "value": "1,720만", "label": "운영비", "delta": "-18%", "caption": "자동화로 월 40h 절약" },
+        { "value": "91%", "label": "CS 만족도", "delta": "-4%p", "caption": "목표 95% 미달" }
+      ],
+      "summary": "매출·고객 호조, CS 만족도는 후속 개선 필요"
+    },
+    {
+      "type": "section",
+      "title": "콘텐츠 슬라이드",
+      "subtitle": "bullets · two_column · table"
+    },
+    {
+      "type": "bullets",
+      "title": "현재 이슈 처리의 구조적 문제",
+      "label": "PROBLEM",
+      "items": [
+        { "heading": "채널 분산", "sub": ["네이버웍스·이메일·슬랙 등 여러 곳으로 이슈 유입", "누락 및 중복 접수 발생"] },
+        { "heading": "이력 소실", "sub": ["처리 내용이 메신저 대화에만 존재", "담당자 부재 시 업무 연속성 단절"] },
+        { "heading": "진행 상태 파악 불가", "sub": ["사업부는 매번 개별 문의 필요", "반복 커뮤니케이션 비용 증가"] }
+      ],
+      "summary": "채널 분산 → 이력 소실 → 진행 파악 불가의 악순환"
+    },
+    {
+      "type": "two_column",
+      "title": "AS-IS vs TO-BE",
+      "left": {
+        "heading": "AS-IS (현재)",
+        "icon": "📄",
+        "color": "blue",
+        "rows": [
+          ["이슈 접수", "슬랙·이메일 분산"],
+          ["처리 이력", "메신저 대화 소실"],
+          ["담당자 배정", "수동·쏠림"],
+          ["상태 확인", "개별 문의 필요"]
+        ],
+        "note": "비교를 위한 사전 상태 정의"
+      },
+      "right": {
+        "heading": "TO-BE (개선)",
+        "icon": "🚀",
+        "color": "purple",
+        "rows": [
+          ["이슈 접수", "슬랙 단일 채널"],
+          ["처리 이력", "Jira 자동 기록"],
+          ["담당자 배정", "자동 배정"],
+          ["상태 확인", "실시간 동기화"]
+        ],
+        "note": "P0-1 색상 시스템 정상화로 좌/우 구분이 가능"
+      }
+    },
+    {
+      "type": "table",
+      "title": "팀별 KPI 달성율 (숫자 컬럼 자동 우측 정렬)",
+      "headers": ["팀", "목표", "실적", "달성율"],
+      "rows": [
+        ["영업팀", "1.2억", "1.35억", "112%"],
+        ["마케팅", "700명", "847명", "121%"],
+        ["CS", "95%", "91%", "96%"],
+        ["개발", "100건", "94건", "94%"]
+      ]
+    },
+    {
+      "type": "section",
+      "title": "프로세스 / 비교",
+      "subtitle": "flow — 4단계 색상이 실제 다르게 보임"
+    },
+    {
+      "type": "flow",
+      "title": "구축 단계 Overview (4가지 색)",
+      "label": "FLOW",
+      "items": [
+        { "heading": "STEP 1–2", "icon": "🔑", "text": "준비물 확인 + Slack 앱 생성 및 권한 설정", "color": "blue" },
+        { "heading": "STEP 3–4", "icon": "⚙️", "text": "Jira 커스텀 필드 + PostgreSQL 테이블 생성", "color": "green" },
+        { "heading": "STEP 5–6", "icon": "🔗", "text": "N8N Credentials 등록 + 워크플로우 구성", "color": "yellow" },
+        { "heading": "STEP 7–8", "icon": "✅", "text": "Slack 웹훅 연결 + Jira Automation 설정", "color": "purple" }
+      ],
+      "summary": "각 단계의 색상이 실제 다른 hex 값으로 렌더링됩니다"
+    },
+    {
+      "type": "section",
+      "title": "강조",
+      "subtitle": "callout · quote"
+    },
+    {
+      "type": "callout",
+      "title": "사업부는 슬랙에 입력만 — 접수·배정·이력이 모두 자동",
+      "label": "핵심 효과"
+    },
+    {
+      "type": "quote",
+      "text": "자동화 도입이 이번 분기 가장 큰 성과입니다. 단순 반복 업무에서 벗어나 핵심 업무에 집중할 수 있었습니다.",
+      "attribution": "팀장 김OO"
+    },
+    {
+      "type": "section",
+      "title": "미디어",
+      "subtitle": "image (placeholder)"
+    },
+    {
+      "type": "image",
+      "title": "이미지 슬라이드 — placeholder 모드",
+      "image": "_samples/missing_demo.png",
+      "caption": "이미지 미존재 시 dashed placeholder 표시"
+    },
+    {
+      "type": "bullets",
+      "title": "발표자 단축키 안내",
+      "label": "PRESENTER UX",
+      "items": [
+        { "heading": "← / → / Space", "sub": ["슬라이드 이전 / 다음 이동"] },
+        { "heading": "Home / End", "sub": ["첫 슬라이드 / 마지막 슬라이드"] },
+        { "heading": "ESC / O", "sub": ["Overview 모드 — 모든 슬라이드 한 화면"] },
+        { "heading": "B / W", "sub": ["블랙아웃 / 화이트아웃 — 청중 주목 강제"] }
+      ],
+      "summary": "URL #/5 형태로 특정 슬라이드 직접 링크 가능"
+    },
+    {
+      "type": "closing",
+      "title": "감사합니다",
+      "subtitle": "doc-gen 디자인 시스템 v2 — 시안 끝"
+    }
+  ]
+}

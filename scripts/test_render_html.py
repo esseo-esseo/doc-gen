@@ -93,10 +93,10 @@ class TestBuildHtml:
         assert "downloadPDF" in html
         assert "PDF 저장" in html
 
-    def test_dot_count_matches_slides(self):
+    def test_no_dots_pagination(self):
         html = rh.build_html(MINIMAL)
-        n = html.count('<div class="dot"') + html.count('<div class="dot ')
-        assert n == len(MINIMAL["slides"])
+        assert '<div class="dot' not in html
+        assert 'class="dots"' not in html
 
     def test_first_slide_is_active(self):
         html = rh.build_html(MINIMAL)
@@ -104,7 +104,9 @@ class TestBuildHtml:
 
     def test_slide_counter_shows_total(self):
         html = rh.build_html(MINIMAL)
-        assert f"1 / {len(MINIMAL['slides'])}" in html
+        total_str = str(len(MINIMAL["slides"])).zfill(2)
+        assert "<b>01</b>" in html
+        assert total_str in html
 
     def test_print_css_present(self):
         assert "@media print" in rh.build_html(MINIMAL)
@@ -193,8 +195,8 @@ class TestSlideTypes:
             "left": {"heading": "L", "icon": "📄", "items": []},
             "right": {"heading": "R", "items": []},
         }, 0)
-        assert "📄" in html
         assert "ph-icon" in html
+        assert "<svg" in html
 
     def test_two_column_note(self):
         html = rh.render_slide_html({
@@ -266,8 +268,13 @@ class TestOptionalFields:
 
     def test_label_rendered(self):
         html = rh.render_slide_html({"type": "title", "title": "T", "label": "MY LABEL"}, 0)
-        assert "slide-lbl" in html
         assert "MY LABEL" in html
+        assert "title-tag" in html
+
+    def test_label_rendered_on_content_slide(self):
+        html = rh.render_slide_html({"type": "bullets", "title": "T", "items": [], "label": "MY LABEL"}, 2)
+        assert "MY LABEL" in html
+        assert "meta-label" in html
 
     def test_summary_bar(self):
         html = rh.render_slide_html({

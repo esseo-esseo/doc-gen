@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "title": "이슈 접수 채널 자동화",
+    "author": "",
+    "date": "2026-05-07"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "title": "이슈 접수 채널 자동화",
+      "subtitle": "Slack · N8N · Jira 연동으로 이슈 처리 프로세스 혁신",
+      "author": "웰체크팀 서은상",
+      "date": "2026-05-07"
+    },
+    {
+      "type": "section",
+      "title": "문제 현황",
+      "subtitle": "왜 지금 바꿔야 하는가"
+    },
+    {
+      "type": "bullets",
+      "title": "현재 이슈 처리의 구조적 문제",
+      "items": [
+        { "heading": "채널 분산", "sub": ["네이버웍스·이메일·슬랙 등 여러 곳으로 이슈 유입", "누락 및 중복 접수 발생"] },
+        { "heading": "이력 소실", "sub": ["처리 내용이 메신저 대화에만 존재", "담당자 부재 시 업무 연속성 단절"] },
+        { "heading": "담당자 배정 비효율", "sub": ["사업부가 개발팀 내 담당자를 직접 수소문", "특정 인원에게 업무 쏠림 발생"] },
+        { "heading": "진행 상태 파악 불가", "sub": ["사업부는 매번 개별 문의 필요", "반복 커뮤니케이션 비용 증가"] }
+      ],
+      "summary": "채널 분산 → 이력 소실 → 담당자 비효율 → 진행 파악 불가의 악순환"
+    },
+    {
+      "type": "two_column",
+      "title": "무엇이 달라지는가 — AS-IS vs TO-BE",
+      "left": {
+        "heading": "AS-IS (현재)",
+        "icon": "📄",
+        "color": "blue",
+        "rows": [
+          ["이슈 접수", "슬랙·이메일·네이버웍스 분산"],
+          ["처리 이력", "메신저 대화에 소실"],
+          ["담당자 배정", "수동 지정·특정인 쏠림"],
+          ["상태 확인", "사업부 개별 문의 필요"],
+          ["소통 이력", "슬랙 또는 Jira 한쪽만 존재"]
+        ]
+      },
+      "right": {
+        "heading": "TO-BE (개선)",
+        "icon": "🚀",
+        "color": "purple",
+        "rows": [
+          ["이슈 접수", "슬랙 단일 채널로 통합"],
+          ["처리 이력", "Jira에 자동 기록"],
+          ["담당자 배정", "자동 배정"],
+          ["상태 확인", "슬랙·Jira 실시간 확인"],
+          ["소통 이력", "양쪽 자동 동기화"]
+        ]
+      }
+    },
+    {
+      "type": "section",
+      "title": "자동화 솔루션",
+      "subtitle": "3가지 원칙으로 문제를 해결한다"
+    },
+    {
+      "type": "flow",
+      "title": "3가지 핵심 개선 원칙",
+      "items": [
+        {
+          "heading": "채널 일원화",
+          "icon": "📢",
+          "text": "슬랙을 단일 이슈 접수 채널로 통합, Jira 자동 연동",
+          "color": "blue"
+        },
+        {
+          "heading": "이력 자동 저장",
+          "icon": "💾",
+          "text": "슬랙 스레드 ↔ Jira 댓글 양방향 자동 동기화",
+          "color": "green"
+        },
+        {
+          "heading": "담당자 자동 배정",
+          "icon": "👤",
+          "text": "이슈 접수 시 개발팀 프로세스로 담당자 자동 부여",
+          "color": "purple"
+        }
+      ],
+      "summary": "사업부는 슬랙에 입력만 — 접수·배정·이력이 모두 자동"
+    },
+    {
+      "type": "table",
+      "title": "시스템 기술 스택",
+      "headers": ["역할", "도구", "주요 기능"],
+      "rows": [
+        ["이슈 접수 및 소통", "Slack", "단일 접수 채널, 봇 알림, 스레드 동기화"],
+        ["이슈 트래킹", "Jira", "티켓 자동 생성, 담당자 관리, 진행 상태 추적"],
+        ["자동화 오케스트레이션", "N8N", "Slack→Jira 변환, 댓글 동기화, 담당자 배정"],
+        ["담당자 및 이력 관리", "PostgreSQL", "assignees · issue_links · comment_sync_log"]
+      ]
+    },
+    {
+      "type": "section",
+      "title": "구축 가이드",
+      "subtitle": "8단계로 완성하는 자동화 환경"
+    },
+    {
+      "type": "flow",
+      "title": "구축 단계 Overview",
+      "items": [
+        {
+          "heading": "STEP 1–2",
+          "icon": "🔑",
+          "text": "준비물 확인 + Slack 앱 생성 및 권한(Scope) 설정",
+          "color": "blue"
+        },
+        {
+          "heading": "STEP 3–4",
+          "icon": "⚙️",
+          "text": "Jira 커스텀 필드 추가 + PostgreSQL 테이블 3종 생성",
+          "color": "green"
+        },
+        {
+          "heading": "STEP 5–6",
+          "icon": "🔗",
+          "text": "N8N Credentials 등록 + 워크플로우 3개 구성",
+          "color": "yellow"
+        },
+        {
+          "heading": "STEP 7–8",
+          "icon": "✅",
+          "text": "Slack 웹훅 연결 + Jira Automation 댓글 트리거 설정",
+          "color": "purple"
+        }
+      ]
+    },
+    {
+      "type": "bullets",
+      "title": "자동화 구현 범위",
+      "items": [
+        { "heading": "Slack → Jira 자동 생성", "sub": ["슬랙 메시지 접수 시 Jira 티켓 자동 생성", "N8N WF1이 담당자 순환 배정 처리"] },
+        { "heading": "댓글 양방향 동기화", "sub": ["슬랙 스레드 댓글 → Jira 댓글 자동 추가", "Jira 댓글 → 슬랙 스레드 자동 알림"] },
+        { "heading": "무한루프 방지 설계", "sub": ["동기화 댓글에 [🔁Slack] / [🔁Jira] 태그 부여", "comment_sync_log 테이블로 중복 처리 차단"] }
+      ],
+      "summary": "슬랙 채널로 접수된 이슈에 한해 자동화 적용"
+    },
+    {
+      "type": "two_column",
+      "title": "현재 한계 및 후속 과제",
+      "left": {
+        "heading": "현재 한계",
+        "icon": "⚠️",
+        "color": "yellow",
+        "items": [
+          "자동화 범위: 이슈 생성·담당자 배정·댓글 동기화 수준",
+          "슬랙으로 접수된 이슈에만 자동화 적용",
+          "수동 Jira 이슈는 슬랙 연동 미지원"
+        ]
+      },
+      "right": {
+        "heading": "후속 과제",
+        "icon": "🔭",
+        "color": "blue",
+        "items": [
+          "이슈 유형별 분류 및 담당자 배정 고도화",
+          "개발팀 이관 이슈 AI 기반 답변 프로세스 검토",
+          "답변 정규화·AI 활용 등 자동 응답 방안 수립"
+        ]
+      }
+    },
+    {
+      "type": "callout",
+      "title": "사업부는 슬랙에 이슈만 입력하면 — 접수·배정·이력이 모두 자동",
+      "label": "핵심 효과"
+    },
+    {
+      "type": "closing",
+      "title": "감사합니다",
+      "subtitle": "문의: esseo@idstrust.com"
+    }
+  ]
+}
