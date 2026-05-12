@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>템플릿 · 04 Section Metrics — 섹션 헤더 + 3 수치 카드 + 보조 표</title>
+  <link rel="stylesheet" href="../_shared/styles.css">
+</head>
+<body>
+  <div id="deck">
+    <div class="slide active">
+      <div class="sh">
+        <div class="num">SECTION 01</div>
+        <h2>주제 영역 <span>개요</span></h2>
+        <div class="desc">핵심 정의를 한 줄로 — 도입 시점 · 시장 맥락 · 운영 주체</div>
+      </div>
+      <div class="hlbox" style="margin-top:1.5vw;">
+        <h3>📌 핵심 정의</h3>
+        <p>이 분야의 정의를 한 단락으로 설명. <strong>핵심 키워드는 굵게 표시</strong>하여 강조하고, 운영 주체·법적 근거·도입 시기 등의 1차 정보를 포함</p>
+      </div>
+      <div class="cards c3">
+        <div class="card blue" style="text-align:center;">
+          <h3>주요 지표 ①</h3>
+          <div class="val" style="font-size:1.8vw;">136만 명</div>
+          <div class="unit">대상 규모 · 최근 N년 증가율 +46%</div>
+        </div>
+        <div class="card blue" style="text-align:center;">
+          <h3>주요 지표 ②</h3>
+          <div class="val" style="font-size:1.8vw;">666명</div>
+          <div class="unit">참여 인력 · 전년 대비 +29%</div>
+        </div>
+        <div class="card blue" style="text-align:center;">
+          <h3>주요 지표 ③</h3>
+          <div class="val" style="font-size:1.8vw;">74개</div>
+          <div class="unit">참여 기관 · 신규 19개 진입</div>
+        </div>
+      </div>
+      <div style="margin-top:1.2vw;">
+        <table class="tbl">
+          <tr>
+            <th>관리 주체</th>
+            <th>역할</th>
+          </tr>
+          <tr><td><strong>주관 기관 A</strong></td><td>전반적 정책 총괄 · 법령 운영</td></tr>
+          <tr><td><strong>실행 기관 B</strong></td><td>현장 운영 · 인력 위촉 · 보상 지급</td></tr>
+          <tr><td><strong>심사 기관 C</strong></td><td>전산 시스템 운영 · 청구 심사</td></tr>
+          <tr><td><strong>협회 기관 D</strong></td><td>교육 · 전문가 발굴 · 피드백</td></tr>
+        </table>
+      </div>
+      <div class="author-foot">작성자 · 웰체크팀 서은상</div>
+    </div>
+  </div>
+
+  <div id="top-actions">
+    <button id="theme-toggle" onclick="toggleTheme()" title="다크/라이트 전환" aria-label="테마 전환">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.05" y2="16.95"/><line x1="16.95" y1="7.05" x2="19.07" y2="4.93"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button id="pdf-save" onclick="savePDF()" title="PDF 저장" aria-label="PDF 저장">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    </button>
+  </div>
+
+  <script src="../_shared/deck.js"></script>
+</body>
+</html>

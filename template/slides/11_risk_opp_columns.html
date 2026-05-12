@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>템플릿 · 11 Risk vs Opportunity — 좌 위협 / 우 기회</title>
+  <link rel="stylesheet" href="../_shared/styles.css">
+</head>
+<body>
+  <div id="deck">
+    <div class="slide active">
+      <div class="sh">
+        <div class="num">SECTION 07</div>
+        <h2>위협 vs <span>기회</span></h2>
+        <div class="desc">해소 가능한 허들이 곧 우리의 사업 기회</div>
+      </div>
+      <div class="two" style="margin-top:1.5vw;">
+        <div>
+          <p style="font-size:.78vw;color:#b91c1c;font-weight:700;margin-bottom:.8vw;">⚠️ 위협 / 허들</p>
+          <div class="ri">
+            <div>
+              <h4>⏱️ 현장 과부하</h4>
+              <p>일 10시간 이상 근무 + 본업에 치이는 구조에서 별도 상담 시간 확보가 최대 현실 장벽</p>
+            </div>
+          </div>
+          <div class="ri">
+            <div>
+              <h4>📋 전산 작성 이중 부담</h4>
+              <p>일부 항목 DB 미등재로 수기 입력 — 현장 OT에서 가장 많은 문의가 집중되는 영역</p>
+            </div>
+          </div>
+          <div class="ri">
+            <div>
+              <h4>🔍 대상자 발굴 어려움</h4>
+              <p>"내 영업권에 해당 대상자가 있는지조차 모른다" — 영업적 발굴 부담이 가장 큰 진입 장벽</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p style="font-size:.78vw;color:#065f46;font-weight:700;margin-bottom:.8vw;">🚀 기회 / 우리의 가치 제안</p>
+          <div class="oi">
+            <div>
+              <h4>🤖 행정 처리 자동화</h4>
+              <p>동의서 디지털화·전산 기록지 자동 생성으로 1인 운영자가 N배 처리 가능</p>
+            </div>
+          </div>
+          <div class="oi">
+            <div>
+              <h4>📱 대상자-운영자 매칭</h4>
+              <p>"내 동네 참여 거점 찾기" 부재 — 양면 시장 매칭 플랫폼으로 동시 장악</p>
+            </div>
+          </div>
+          <div class="oi">
+            <div>
+              <h4>🧠 AI 기반 상담 보조</h4>
+              <p>AI 분석으로 사전 상담 가이드라인 생성 — 학습 시간 부족한 현장 보완</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:1vw;padding:.9vw 1.2vw;background:linear-gradient(135deg,rgba(79,142,247,.1),rgba(124,58,237,.1));border:1px solid rgba(79,142,247,.3);border-radius:.8vw;font-size:.82vw;color:#1d4ed8;">
+        💡 <strong>전략적 시사점:</strong> 위협 = 해결 가능한 문제 = 우리의 핵심 가치 제안. 모든 허들은 소프트웨어와 운영 경험으로 해결 가능
+      </div>
+      <div class="author-foot">작성자 · 웰체크팀 서은상</div>
+    </div>
+  </div>
+
+  <div id="top-actions">
+    <button id="theme-toggle" onclick="toggleTheme()" title="다크/라이트 전환" aria-label="테마 전환">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.05" y2="16.95"/><line x1="16.95" y1="7.05" x2="19.07" y2="4.93"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button id="pdf-save" onclick="savePDF()" title="PDF 저장" aria-label="PDF 저장">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    </button>
+  </div>
+
+  <script src="../_shared/deck.js"></script>
+</body>
+</html>

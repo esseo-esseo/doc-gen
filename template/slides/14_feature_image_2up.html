@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>템플릿 · 14 Feature Image 2-up — 2개 카드 + 이미지 페어</title>
+  <link rel="stylesheet" href="../_shared/styles.css">
+</head>
+<body>
+  <div id="deck">
+    <div class="slide active">
+      <div class="sh">
+        <div class="num">SECTION 10</div>
+        <h2>핵심 기능 상세 <span>— 매칭 플랫폼</span></h2>
+        <div class="desc">공급·수요 양면 시장의 동시 장악 전략</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2vw;margin-top:1.8vw;">
+        <div class="feature green">
+          <div class="ft-head">🏥 공급(운영자) 풀 확보</div>
+          <p>• 자격 보유 운영자에게 사업 참여 태그 부여</p>
+          <p>• 사업 참여 시 수익 시뮬레이터 제공 → 참여 유인 강화</p>
+          <div class="ft-img-row" style="justify-content:center;">
+            <div class="img-ph ratio-916" style="width:36%;">
+              <div class="ph-ico">🖼️</div>
+              <div class="ph-txt">image</div>
+              <div class="ph-sub">태그 화면 — 9:16</div>
+            </div>
+            <div class="img-ph ratio-916" style="width:36%;">
+              <div class="ph-ico">🖼️</div>
+              <div class="ph-txt">image</div>
+              <div class="ph-sub">수익 시뮬레이터 — 9:16</div>
+            </div>
+          </div>
+        </div>
+        <div class="feature green">
+          <div class="ft-head">👤 수요(고객) 발굴</div>
+          <p>• 이용 이력 기반 요건 충족 고객 자동 식별 → 운영자에게 알림</p>
+          <p>• 단골 거점 연결 기능을 통해 기존 고객의 사업 참여 전환율 제고</p>
+          <div class="ft-img-row" style="justify-content:center;">
+            <div class="img-ph ratio-916" style="width:36%;">
+              <div class="ph-ico">🖼️</div>
+              <div class="ph-txt">image</div>
+              <div class="ph-sub">식별 알림 — 9:16</div>
+            </div>
+            <div class="img-ph ratio-916" style="width:36%;">
+              <div class="ph-ico">🖼️</div>
+              <div class="ph-txt">image</div>
+              <div class="ph-sub">단골 연결 — 9:16</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="author-foot">작성자 · 웰체크팀 서은상</div>
+    </div>
+  </div>
+
+  <div id="top-actions">
+    <button id="theme-toggle" onclick="toggleTheme()" title="다크/라이트 전환" aria-label="테마 전환">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.05" y2="16.95"/><line x1="16.95" y1="7.05" x2="19.07" y2="4.93"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button id="pdf-save" onclick="savePDF()" title="PDF 저장" aria-label="PDF 저장">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    </button>
+  </div>
+
+  <script src="../_shared/deck.js"></script>
+</body>
+</html>

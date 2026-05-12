@@ -17,10 +17,12 @@ argument-hint: [주제] (생략 가능 — 생략 시 사용자에게 묻는다)
 
 이미 충분한 맥락이 대화에 있으면 묻지 말고 바로 진행.
 
+**작성자(author) 확보** — 인자(`author:`)나 대화 맥락에 작성자가 명시되어 있지 않으면 **이 단계에서 함께 묻는다** ("표지에 들어갈 작성자명을 알려주세요"). 임의의 기본값을 채우지 않는다.
+
 선택 정보 (자유롭게 인자 안에 적혀있으면 추출):
 - `title:` — 표지 제목 (없으면 주제로부터 자동 생성)
 - `subtitle:` — 부제
-- `author:` — 발표자 (기본값: **"웰체크팀 서은상"** 으로 고정. 사용자가 다른 값을 명시한 경우에만 그 값 사용)
+- `author:` — 발표자 (인자·맥락에 없으면 0단계에서 사용자에게 묻는다)
 - `slide_count:` — 정수 (기본 10)
 - `template:` — `report | proposal | metric | tutorial | review`
 - `output:` — 출력 디렉토리명 (기본: `output/YYYY-MM-DD_제목`)
@@ -80,7 +82,7 @@ input 폴더는 읽지 않는다. 대화 맥락 + 사용자 인자만 사용.
 {
   "meta": {
     "title": "발표 제목",
-    "author": "웰체크팀 서은상",
+    "author": "<사용자에게 받은 작성자명>",
     "date": "YYYY-MM-DD"
   },
   "slides": []
@@ -91,7 +93,7 @@ input 폴더는 읽지 않는다. 대화 맥락 + 사용자 인자만 사용.
 
 ```json
 // 표지
-{ "type": "title", "title": "제목", "subtitle": "부제", "label": "REPORT", "author": "웰체크팀 서은상", "date": "2026-05-08" }
+{ "type": "title", "title": "제목", "subtitle": "부제", "label": "REPORT", "author": "<사용자에게 받은 작성자명>", "date": "2026-05-08" }
 
 // 섹션 헤더 (좌측 오렌지 vertical bar + section 번호)
 { "type": "section", "title": "섹션명", "subtitle": "설명" }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>템플릿 · 12 Card Grid 4-up — 2×2 강조 카드</title>
+  <link rel="stylesheet" href="../_shared/styles.css">
+</head>
+<body>
+  <div id="deck">
+    <div class="slide active">
+      <div class="sh">
+        <div class="num">SECTION 08</div>
+        <h2>지금 진입해야 하는 <span>4가지 이유</span></h2>
+      </div>
+      <div class="cards c2" style="margin-top:1.5vw;gap:1vw;">
+        <div class="card blue" style="padding:1.8vw;">
+          <h3 style="font-size:1.15vw;margin-bottom:.8vw;">🔗 기존 노하우 이식</h3>
+          <p style="font-size:.95vw;color:#475569;line-height:1.8;margin-top:.5vw;">• 인접 사업에서 쌓은 행정·전산 노하우를 그대로 이식 가능</p>
+          <p style="font-size:.95vw;color:#475569;line-height:1.8;margin-top:.4vw;">• [등록→동의→상담→청구]로 이어지는 유사 구조 — 시행착오 최소화</p>
+        </div>
+        <div class="card blue" style="padding:1.8vw;">
+          <h3 style="font-size:1.15vw;margin-bottom:.8vw;">📈 시장 선점 우위</h3>
+          <p style="font-size:.95vw;color:#475569;line-height:1.8;margin-top:.5vw;">• 전문가 666명 돌파, 연평균 <strong>29.3% 가파른 성장률</strong></p>
+          <p style="font-size:.95vw;color:#475569;line-height:1.8;margin-top:.4vw;">• 시장이 성숙해지면 선점 우위는 빠르게 감소 — 지금이 최적 타이밍</p>
+        </div>
+        <div class="card blue" style="padding:1.8vw;">
+          <h3 style="font-size:1.15vw;margin-bottom:.8vw;">👥 양면 시장 창출</h3>
+          <p style="font-size:.95vw;color:#475569;line-height:1.8;margin-top:.5vw;">• 수요(고객)와 공급(운영자)을 잇는 매칭 플랫폼으로 시장 지배력 강화</p>
+          <p style="font-size:.95vw;color:#475569;line-height:1.8;margin-top:.4vw;">• 안내문 받고도 참여처를 못 찾는 대기 풀이 즉시 활용 가능</p>
+        </div>
+        <div class="card blue" style="padding:1.8vw;">
+          <h3 style="font-size:1.15vw;margin-bottom:.8vw;">🚀 확장성</h3>
+          <p style="font-size:.95vw;color:#475569;line-height:1.8;margin-top:.5vw;">• 기관 모형 확대, 인접 영역 신규 모델 도입 등 사업 영역 지속 확장 중</p>
+          <p style="font-size:.95vw;color:#475569;line-height:1.8;margin-top:.4vw;">• 향후 일차 기관까지 확대되면 360° 케어 가능</p>
+        </div>
+      </div>
+      <div
+        style="margin-top:1vw;padding:.9vw 1.2vw;text-align:center;background:linear-gradient(135deg,rgba(245,158,11,.1),rgba(239,68,68,.08));border:1px solid rgba(245,158,11,.3);border-radius:.8vw;">
+        <span style="font-size:1vw;font-weight:700;color:#92400e;">핵심 공식: 허들 최소화 × 수익 가시화 = 행동 변화</span>
+      </div>
+      <div class="author-foot">작성자 · 웰체크팀 서은상</div>
+    </div>
+  </div>
+
+  <div id="top-actions">
+    <button id="theme-toggle" onclick="toggleTheme()" title="다크/라이트 전환" aria-label="테마 전환">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.05" y2="16.95"/><line x1="16.95" y1="7.05" x2="19.07" y2="4.93"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button id="pdf-save" onclick="savePDF()" title="PDF 저장" aria-label="PDF 저장">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    </button>
+  </div>
+
+  <script src="../_shared/deck.js"></script>
+</body>
+</html>

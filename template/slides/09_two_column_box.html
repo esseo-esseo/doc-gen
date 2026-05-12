@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>템플릿 · 09 Two Column Box — 좌 데이터 / 우 시뮬레이션</title>
+  <link rel="stylesheet" href="../_shared/styles.css">
+</head>
+<body>
+  <div id="deck">
+    <div class="slide active">
+      <div class="sh">
+        <div class="num">SECTION 05</div>
+        <h2>단가 구조 & <span>수익 시뮬레이션</span></h2>
+        <div class="desc">월 10건 운영 시 연간 약 1,098만 원의 순수 추가 수익 시뮬레이션</div>
+      </div>
+      <div style="margin-top:1.2vw;display:grid;grid-template-columns:1fr 1fr;gap:1.2vw;align-items:stretch;">
+
+        <div class="col-box blue" style="display:flex;flex-direction:column;">
+          <div class="sec-pill">
+            <div class="bar"></div>
+            <span class="lbl">단가 구조</span>
+          </div>
+          <table class="tbl" style="margin-bottom:1vw;">
+            <tr>
+              <th>업무 흐름</th>
+              <th>유형</th>
+              <th style="text-align:right;">단가</th>
+            </tr>
+            <tr><td>분석·식별</td><td>1차 방문</td><td style="text-align:right;">83,010원</td></tr>
+            <tr><td>분석·식별</td><td>1차 방문 (2인 동행)</td><td style="text-align:right;">124,520원</td></tr>
+            <tr><td>분석·식별</td><td>현장 내방</td><td style="text-align:right;"><strong style="color:#2563eb;">43,060원</strong></td></tr>
+            <tr><td>유선 상담</td><td>유선</td><td style="text-align:right;"><strong style="color:#2563eb;">5,390원</strong></td></tr>
+            <tr><td>모니터링</td><td>현장 방문</td><td style="text-align:right;">74,990원</td></tr>
+            <tr><td>모니터링</td><td>현장 내방</td><td style="text-align:right;"><strong style="color:#2563eb;">43,060원</strong></td></tr>
+            <tr><td>모니터링</td><td>유선</td><td style="text-align:right;">12,010원</td></tr>
+          </table>
+          <p style="font-size:.78vw;color:#64748b;margin-top:auto;padding-top:.8vw;">⚠️ 본인부담금 없음 — 단가 전액 외부 기관이 직접 지급</p>
+        </div>
+
+        <div class="col-box amber" style="display:flex;flex-direction:column;">
+          <div class="sec-pill amber">
+            <div class="bar"></div>
+            <span class="lbl">수익 시뮬레이션</span>
+          </div>
+          <p style="font-size:.75vw;color:#94a3b8;margin-bottom:.8vw;">월 10건 운영 · 분석 1회 + 유선 1회 + 모니터링(현장) 1회 기준</p>
+          <table class="tbl" style="margin-bottom:.8vw;">
+            <tr>
+              <th>행위</th>
+              <th style="text-align:right;">단가</th>
+              <th style="text-align:right;">10건 기준</th>
+            </tr>
+            <tr><td>분석·식별</td><td style="text-align:right;">43,060원</td><td style="text-align:right;">430,600원</td></tr>
+            <tr><td>유선 상담</td><td style="text-align:right;">5,390원</td><td style="text-align:right;">53,900원</td></tr>
+            <tr><td>모니터링 (현장)</td><td style="text-align:right;">43,060원</td><td style="text-align:right;">430,600원</td></tr>
+            <tr style="background:#dbeafe;">
+              <td><strong>월 합계</strong></td>
+              <td></td>
+              <td style="text-align:right;"><strong style="color:#2563eb;">약 915,100원</strong></td>
+            </tr>
+            <tr style="background:#fef3c7;">
+              <td><strong>연간 환산</strong></td>
+              <td></td>
+              <td style="text-align:right;"><strong style="color:#d97706;font-size:1.1vw;">약 1,098만 원</strong></td>
+            </tr>
+          </table>
+          <p style="font-size:.78vw;color:#065f46;margin-top:auto;padding-top:.8vw;">✅ 기존 수익과 독립된 순수 추가 — 본업과 무관하게 발생</p>
+        </div>
+
+      </div>
+      <div class="author-foot">작성자 · 웰체크팀 서은상</div>
+    </div>
+  </div>
+
+  <div id="top-actions">
+    <button id="theme-toggle" onclick="toggleTheme()" title="다크/라이트 전환" aria-label="테마 전환">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.05" y2="16.95"/><line x1="16.95" y1="7.05" x2="19.07" y2="4.93"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button id="pdf-save" onclick="savePDF()" title="PDF 저장" aria-label="PDF 저장">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    </button>
+  </div>
+
+  <script src="../_shared/deck.js"></script>
+</body>
+</html>

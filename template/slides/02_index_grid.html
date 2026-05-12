@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>템플릿 · 02 Index Grid — 8개 카드 목차 (2×4)</title>
+  <link rel="stylesheet" href="../_shared/styles.css">
+</head>
+<body>
+  <div id="deck">
+    <div class="slide active">
+      <div class="sh">
+        <div class="num">INDEX</div>
+        <h2>전체 <span>목차</span></h2>
+      </div>
+      <div class="cards c2" style="margin-top:2vw;">
+        <div class="li">
+          <div class="ico">🔍</div>
+          <div>
+            <h4>1. 분석 배경과 정의</h4>
+            <p>도입 배경 · 핵심 정의 · 시장 맥락</p>
+          </div>
+        </div>
+        <div class="li">
+          <div class="ico">🏗️</div>
+          <div>
+            <h4>2. 모형·구조 비교</h4>
+            <p>A안 vs B안의 핵심 차이점</p>
+          </div>
+        </div>
+        <div class="li">
+          <div class="ico">👣</div>
+          <div>
+            <h4>3. 세부 유형 분류</h4>
+            <p>운영 형태별 차이와 우리가 집중할 모델</p>
+          </div>
+        </div>
+        <div class="li">
+          <div class="ico">📋</div>
+          <div>
+            <h4>4. 업무 흐름도</h4>
+            <p>핵심 프로세스 3~4단계 정리</p>
+          </div>
+        </div>
+        <div class="li" style="border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.05);">
+          <div class="ico">💰</div>
+          <div>
+            <h4>5. 수익·비용 시뮬레이션</h4>
+            <p>실제 운영 시 예상 수치 계산</p>
+          </div>
+        </div>
+        <div class="li">
+          <div class="ico">🚧</div>
+          <div>
+            <h4>6. 진입 장벽·허들</h4>
+            <p>제도·운영 허들과 해소 방안</p>
+          </div>
+        </div>
+        <div class="li">
+          <div class="ico">⭐</div>
+          <div>
+            <h4>7. 전략적 시사점</h4>
+            <p>지금 진입해야 하는 이유</p>
+          </div>
+        </div>
+        <div class="li">
+          <div class="ico">🔄</div>
+          <div>
+            <h4>부록. 추가 참고 자료</h4>
+            <p>관련 정책·인접 사업과의 연계</p>
+          </div>
+        </div>
+      </div>
+      <div class="author-foot">작성자 · 웰체크팀 서은상</div>
+    </div>
+  </div>
+
+  <div id="top-actions">
+    <button id="theme-toggle" onclick="toggleTheme()" title="다크/라이트 전환" aria-label="테마 전환">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.05" y2="16.95"/><line x1="16.95" y1="7.05" x2="19.07" y2="4.93"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button id="pdf-save" onclick="savePDF()" title="PDF 저장" aria-label="PDF 저장">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    </button>
+  </div>
+
+  <script src="../_shared/deck.js"></script>
+</body>
+</html>

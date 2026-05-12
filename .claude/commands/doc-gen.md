@@ -8,12 +8,15 @@
 
 `input/request.yaml` 파일을 읽는다.
 
+`request.yaml`에 `author` 키가 없고 대화 맥락에도 작성자가 명시되어 있지 않으면, 작업 시작 시 사용자에게 한 번 "표지/메타에 들어갈 작성자명을 알려주세요"라고 묻고 그 값을 사용한다. 임의의 기본값을 채우지 않는다.
+
 파일이 없으면 아래 형식을 안내하고 중단한다:
 
 ```yaml
 type: presentation          # 고정값
 title: "문서 제목"
 subtitle: "부제목"          # optional
+author: "표지에 들어갈 작성자명"   # optional — 없으면 작업 시작 시 사용자에게 묻는다
 template: report            # report | proposal | briefing | tutorial | review
 slide_count: 12             # optional — 미지정 시 내용 기반 자동 결정
 confluence: false           # true면 confluence-ready.md 추가 생성
@@ -79,7 +82,7 @@ find input/ -not -path 'input/_archive/*' -not -name 'request.yaml' -type f
 {
   "meta": {
     "title": "문서 제목",
-    "author": "웰체크팀 서은상",
+    "author": "<사용자에게 받은 작성자명>",
     "date": "YYYY-MM-DD"
   },
   "slides": []

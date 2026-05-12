@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>템플릿 · 05 Comparison Table — 비교 표 + 결론 하이라이트</title>
+  <link rel="stylesheet" href="../_shared/styles.css">
+</head>
+<body>
+  <div id="deck">
+    <div class="slide active">
+      <div class="sh">
+        <div class="num">SECTION 02</div>
+        <h2>A안과 B안 <span>모형 비교</span></h2>
+        <div class="desc">두 가지 운영 모델 중 우리가 집중할 모형 — 의사결정의 근거</div>
+      </div>
+      <div style="margin-top:1.5vw;">
+        <table class="tbl">
+          <tr>
+            <th style="width:18%">구분</th>
+            <th>A안 (기존 모델)</th>
+            <th>B안 (집중 공략) ✅</th>
+          </tr>
+          <tr>
+            <td><strong>대상</strong></td>
+            <td>특정 조건을 만족하는 한정된 그룹</td>
+            <td>요건 충족 시 <strong>연령·조건 무관 광범위</strong> 접근 가능</td>
+          </tr>
+          <tr>
+            <td><strong>운영 주체</strong></td>
+            <td>대형 기관 내부 다학제 팀</td>
+            <td>지역 단위 전문가 + 공공 기관</td>
+          </tr>
+          <tr>
+            <td><strong>운영 장소</strong></td>
+            <td>기관 내부</td>
+            <td>현장 또는 <strong>지역 거점</strong></td>
+          </tr>
+          <tr>
+            <td><strong>청구 주체</strong></td>
+            <td>기관</td>
+            <td><strong>전문가가 직접 청구</strong></td>
+          </tr>
+          <tr>
+            <td><strong>운영 기간</strong></td>
+            <td>특정 이벤트 단위</td>
+            <td>1차 상담 후 N개월 모니터링</td>
+          </tr>
+          <tr>
+            <td><strong>우리 사업과 관련성</strong></td>
+            <td><span class="bp bp-r">❌ 해당 없음</span></td>
+            <td><span class="bp bp-g">✅ 집중 공략 모델</span></td>
+          </tr>
+        </table>
+      </div>
+      <div class="hlbox" style="margin-top:1.4vw;">
+        <h3>💡 왜 B안인가?</h3>
+        <p>지역 단위로 <strong>전문가가 독립적으로 가치를 창출</strong>하는 구조. A안과 달리 별도 기관 행정 의존도가 낮아
+          소프트웨어로 직접 연동·자동화할 수 있는 모형이다.</p>
+      </div>
+      <div class="author-foot">작성자 · 웰체크팀 서은상</div>
+    </div>
+  </div>
+
+  <div id="top-actions">
+    <button id="theme-toggle" onclick="toggleTheme()" title="다크/라이트 전환" aria-label="테마 전환">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.05" y2="16.95"/><line x1="16.95" y1="7.05" x2="19.07" y2="4.93"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button id="pdf-save" onclick="savePDF()" title="PDF 저장" aria-label="PDF 저장">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    </button>
+  </div>
+
+  <script src="../_shared/deck.js"></script>
+</body>
+</html>

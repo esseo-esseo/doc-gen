@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>템플릿 · 15 Milestone Timeline — 3-Phase 가로 타임라인</title>
+  <link rel="stylesheet" href="../_shared/styles.css">
+</head>
+<body>
+  <div id="deck">
+    <div class="slide active">
+      <div class="sh">
+        <div class="num">SECTION 11</div>
+        <h2>단계별 <span>실행 계획</span></h2>
+        <div class="desc">3개 Phase로 나눈 마일스톤과 단계별 산출물</div>
+      </div>
+      <div class="milestone">
+        <div class="ms-track"></div>
+        <div class="ms-grid">
+          <div class="ms-col p1">
+            <div class="ms-date">3월 ~ 4월 중순</div>
+            <div class="ms-circle"><span>01</span></div>
+            <div class="ms-title">기반 구축</div>
+            <div class="ms-body">
+              📱 위치 기반 거점 찾기<br>단골 거점 연결<br>인테이크 데이터 접수<br>알림 발송<br><br>
+              🖥️ 통합 로그인<br>단골 고객 조회<br>인테이크 수신·조회<br>거점 정보 등록
+            </div>
+          </div>
+          <div class="ms-col p2">
+            <div class="ms-date">4월 말 ~ 6월</div>
+            <div class="ms-circle"><span>02</span></div>
+            <div class="ms-title">기능 개발</div>
+            <div class="ms-body">
+              검색 기능 강화<br>외부 데이터 동기화<br>동의서 디지털화<br>AI 기반 요약·분석
+            </div>
+          </div>
+          <div class="ms-col p3">
+            <div class="ms-date">하반기</div>
+            <div class="ms-circle"><span>03</span></div>
+            <div class="ms-title">고도화</div>
+            <div class="ms-body">
+              수요-공급 추천·매칭<br>청구 원클릭 연동<br>AI 기반 상호작용 분석
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="author-foot">작성자 · 웰체크팀 서은상</div>
+    </div>
+  </div>
+
+  <div id="top-actions">
+    <button id="theme-toggle" onclick="toggleTheme()" title="다크/라이트 전환" aria-label="테마 전환">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.05" y2="16.95"/><line x1="16.95" y1="7.05" x2="19.07" y2="4.93"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button id="pdf-save" onclick="savePDF()" title="PDF 저장" aria-label="PDF 저장">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    </button>
+  </div>
+
+  <script src="../_shared/deck.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>템플릿 · 07 Flow 3-step — 3단계 프로세스 + 보조 카드</title>
+  <link rel="stylesheet" href="../_shared/styles.css">
+</head>
+<body>
+  <div id="deck">
+    <div class="slide active">
+      <div class="sh">
+        <div class="num">SECTION 04</div>
+        <h2>업무 <span>흐름도</span></h2>
+        <div class="desc">3단계 프로세스 — 각 단계의 핵심 행위·산출물·소요 시간</div>
+      </div>
+      <div class="flow" style="margin-top:2vw;margin-bottom:1.5vw;">
+        <div class="fstep">
+          <div class="ftag">STEP 1</div>
+          <h4>🔬 분석·식별</h4>
+          <p>1차 인테이크 후 현황 전체 파악<br>중복·충돌·결함 등 문제 식별<br>의사결정자에게 조정 건의 (필요 시)<br><br><strong style="color:#2563eb;">단가: 43,060원</strong></p>
+        </div>
+        <div class="farr">▶</div>
+        <div class="fstep">
+          <div class="ftag">STEP 2</div>
+          <h4>📞 후속 상담</h4>
+          <p>변경 사항 확인 또는 추가 상담<br>대상자 상태 파악 및 중간 점검<br><br><br><strong style="color:#2563eb;">단가: 5,390원</strong></p>
+        </div>
+        <div class="farr">▶</div>
+        <div class="fstep">
+          <div class="ftag">STEP 3</div>
+          <h4>📊 모니터링</h4>
+          <p>현장 또는 유선으로 결과 추적<br>개선 여부 확인 및 지속 관리 계획<br><br><br><strong style="color:#2563eb;">단가: 43,060원 (현장) / 12,010원 (유선)</strong></p>
+        </div>
+      </div>
+      <div class="cards c2" style="gap:.8vw;">
+        <div class="card" style="padding:1vw;">
+          <h3 style="font-size:.88vw;margin-bottom:.5vw;">📝 사전 준비 (전문가 등록)</h3>
+          <p style="font-size:.78vw;color:#64748b;">① 협회 온라인 교육 이수<br>② 지부 서류 제출 (자격증, 신분증, 통장사본)<br>③ 시스템 등록 완료</p>
+        </div>
+        <div class="card gold" style="padding:1vw;">
+          <h3 style="font-size:.88vw;margin-bottom:.5vw;">💡 핵심 운영 포인트</h3>
+          <p style="font-size:.78vw;color:#64748b;">• 동의서 수취 후 기관에 제출 (1년 2회)<br>• 기록지는 전산 시스템 필수<br>• 미등재 항목은 수기 작성<br>• 단가 청구는 익월 지급</p>
+        </div>
+      </div>
+      <div class="author-foot">작성자 · 웰체크팀 서은상</div>
+    </div>
+  </div>
+
+  <div id="top-actions">
+    <button id="theme-toggle" onclick="toggleTheme()" title="다크/라이트 전환" aria-label="테마 전환">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.05" y2="16.95"/><line x1="16.95" y1="7.05" x2="19.07" y2="4.93"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button id="pdf-save" onclick="savePDF()" title="PDF 저장" aria-label="PDF 저장">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    </button>
+  </div>
+
+  <script src="../_shared/deck.js"></script>
+</body>
+</html>

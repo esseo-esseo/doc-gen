@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>템플릿 · 06 Detail Table — 비교 표 + 보조 3 카드</title>
+  <link rel="stylesheet" href="../_shared/styles.css">
+</head>
+<body>
+  <div id="deck">
+    <div class="slide active">
+      <div class="sh">
+        <div class="num">SECTION 03</div>
+        <h2>세부 유형 <span>분류</span></h2>
+        <div class="desc">동일 모형 내 운영 방식 차이 — 우리가 집중할 유형</div>
+      </div>
+      <div style="margin-top:1.5vw;">
+        <table class="tbl" style="margin-bottom:1.4vw;">
+          <tr>
+            <th style="width:18%">구분</th>
+            <th>유형 ① 방문형</th>
+            <th>유형 ② 내방형 ✅</th>
+          </tr>
+          <tr>
+            <td><strong>서비스 방식</strong></td>
+            <td>전문가가 고객을 직접 찾아가 수행</td>
+            <td>고객이 거점에 내방하여 상담</td>
+          </tr>
+          <tr>
+            <td><strong>1차 단가</strong></td>
+            <td><strong>82,510원</strong> (동행 시 1.5배 가산)</td>
+            <td><strong>43,060원</strong></td>
+          </tr>
+          <tr>
+            <td><strong>운영 부담</strong></td>
+            <td>이동 시간·비용 발생, 운영 공백 발생</td>
+            <td>거점 내에서 진행, 공백 최소화</td>
+          </tr>
+          <tr>
+            <td><strong>현실 적용성</strong></td>
+            <td><span class="bp bp-r">낮음 — 1인 운영 사실상 불가</span></td>
+            <td><span class="bp bp-g">높음 — 기존 운영에 통합 가능</span></td>
+          </tr>
+          <tr>
+            <td><strong>우리 집중 유형</strong></td>
+            <td><span class="bp bp-r">❌ 해당 없음</span></td>
+            <td><span class="bp bp-g">✅ 우리가 집중할 유형</span></td>
+          </tr>
+        </table>
+      </div>
+      <div class="cards c3">
+        <div class="card blue" style="text-align:center;">
+          <h3>주요 행위 ①</h3>
+          <div class="val">43,060원</div>
+          <div class="unit">내방 1차 상담</div>
+        </div>
+        <div class="card blue" style="text-align:center;">
+          <h3>주요 행위 ②</h3>
+          <div class="val">5,390원</div>
+          <div class="unit">유선 추가 상담</div>
+        </div>
+        <div class="card blue" style="text-align:center;">
+          <h3>주요 행위 ③</h3>
+          <div class="val">43,060원</div>
+          <div class="unit">모니터링 (내방 기준)</div>
+        </div>
+      </div>
+      <div class="author-foot">작성자 · 웰체크팀 서은상</div>
+    </div>
+  </div>
+
+  <div id="top-actions">
+    <button id="theme-toggle" onclick="toggleTheme()" title="다크/라이트 전환" aria-label="테마 전환">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.05" y2="16.95"/><line x1="16.95" y1="7.05" x2="19.07" y2="4.93"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button id="pdf-save" onclick="savePDF()" title="PDF 저장" aria-label="PDF 저장">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    </button>
+  </div>
+
+  <script src="../_shared/deck.js"></script>
+</body>
+</html>

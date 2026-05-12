@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>템플릿 · 13 Feature Image 3-up — 3개 기능 카드 + 이미지 placeholder</title>
+  <link rel="stylesheet" href="../_shared/styles.css">
+</head>
+<body>
+  <div id="deck">
+    <div class="slide active">
+      <div class="sh">
+        <div class="num">SECTION 09</div>
+        <h2>핵심 기능 상세 <span>— 자동화</span></h2>
+        <div class="desc">3개 기능 각각의 가치 제안과 화면 예시</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1vw;margin-top:1.4vw;">
+        <div class="feature">
+          <div class="ft-head">📌 온보딩 자동화</div>
+          <p>• 신규 사용자 지정 요건(교육 이수, 등록 절차)을 시스템에서 안내</p>
+          <p>• 일정 알림 및 기한 리마인더 자동 발송으로 이탈 방지</p>
+          <div class="img-ph ratio-43" style="margin-top:.8vw;width:60%;align-self:flex-start;">
+            <div class="ph-ico">🖼️</div>
+            <div class="ph-txt">image</div>
+            <div class="ph-sub">온보딩 화면 — 9:16</div>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="ft-head">📄 동의서 디지털화</div>
+          <p>• 종이 동의서를 앱 내 전자 서명으로 대체</p>
+          <p>• 서명 즉시 외부 기관 연동 및 PDF 자동 생성·저장</p>
+          <div class="img-ph ratio-169" style="margin-top:.8vw;">
+            <div class="ph-ico">🖼️</div>
+            <div class="ph-txt">image</div>
+            <div class="ph-sub">전자 서명 흐름 — 16:9</div>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="ft-head">💳 청구 원클릭 연동</div>
+          <p>• 기록지를 시스템에서 간단하게 작성 가능</p>
+          <p>• 작성 완료 시 외부 시스템으로 자동 연동</p>
+          <div class="img-ph ratio-169" style="margin-top:.8vw;">
+            <div class="ph-ico">🖼️</div>
+            <div class="ph-txt">image</div>
+            <div class="ph-sub">청구 화면 — 16:9</div>
+          </div>
+        </div>
+      </div>
+      <div class="author-foot">작성자 · 웰체크팀 서은상</div>
+    </div>
+  </div>
+
+  <div id="top-actions">
+    <button id="theme-toggle" onclick="toggleTheme()" title="다크/라이트 전환" aria-label="테마 전환">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.05" y2="16.95"/><line x1="16.95" y1="7.05" x2="19.07" y2="4.93"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button id="pdf-save" onclick="savePDF()" title="PDF 저장" aria-label="PDF 저장">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    </button>
+  </div>
+
+  <script src="../_shared/deck.js"></script>
+</body>
+</html>
